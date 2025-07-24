@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo Application</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <!-- header section start -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-white ">
+            <div class="container-lg px-4 px-sm-5 px-lg-0">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./assets/img/logo.png" alt="" class="img-fluid">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">More Option</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#" id="logIn" data-bs-toggle="modal"
+                                data-bs-target="#signupModal">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn" href="#" id="signUp" data-bs-toggle="modal"
+                                data-bs-target="#signupModal">Sign Up</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Navbar menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-group">
+                <li class="list-group-item active" aria-current="true">
+                    <a href="#">Home</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">About Us</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Features</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Menu Option</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+            <ul class="list-group list-inline mt-4">
+                <li>
+                    <a class="nav-link btn" href="#" id="logIn" data-bs-toggle="modal" data-bs-target="#signupModal">Log
+                        In</a>
+                </li>
+                <li>
+                    <a class="nav-link btn" href="#" id="signUp" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Sign Up</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- header section end -->
+    <!-- hero section start -->
+    <section id="hero">
+        <div class="container px-4 px-sm-0">
+            <div class="row">
+                <div class="col-lg-7 mx-auto text-center">
+                    <h1 class="fw-bold display-5 text-blue">Simplify Your Life with Our Todo App</h1>
+                    <p class="text-gray ">Stay organized and boost your productivity with our intuitive todo website.
+                        Experience a modern approach to task management that fits your lifestyle.</p>
+                    <div class="d-flex gap-4 text-center justify-content-center">
+                        <button class="btn bg-pinkred text-white">Get started</button>
+                        <button class="btn text-pinkred border-pinkred">Learn more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-7 col-lg-8 d-flex mb-3">
+                    <div id="banner-content" class="bg-pinkred">
+                        <h2 class="display-1" style="font-weight: 400;color: rgba(245, 243, 243,0.8);">
+                            <span class="text-white-50">Organize.</span> <br>
+                            Achieve. <br>
+                            Relax.
+                        </h2>
+                        <p class="text-white">Turn clutter into clarity, chaos into control, and dreams into done.bold
+                            visions into market success</p>
+                        <div class="d-flex">
+                            <button class="btn bg-white">Get started</button>
+                            <button class="btn text-white">Learn more</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 col-lg-4 d-flex mb-3">
+                    <div id="user-section">
+                        <img src="./assets/img/user.png" alt="" class="img-fluid">
+                        <div id="user-section-content">
+                            <h2 class="text-white fw-bold fs-1">
+                                <span class="text-white-50">Your Tasks.</span> <br>
+                                Our Tools.
+                            </h2>
+                            <div class="information">
+                                <p class="mb-0 fs-5"> Freddie Halvorson</p>
+                                <span class="text-gray"><small><small>Chief Productivity
+                                            Enthusiast</small></small></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4 text-center">
+                <div class="col">
+                    <img src="./assets/img/google.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/facebook.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/youtube.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/pinterest.svg" alt="" class="img-fluid">
+                </div>
+                <div class="col">
+                    <img src="./assets/img/twitch.svg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+       <!-- testimonial section end -->
+    <section class="container my-5">
+      <h2 class="text-center fw-bold mb-5">
+        Transform Your Productivity with Our <br />Innovative To-Do List
+        Features
+      </h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3 feature-col">
+          <span class="feature-number">01</span>
+          <div class="feature-block d-flex flex-column align-items-start">
+            <!-- Icon: User-Friendly Interface -->
+           <img src="./assets/img/user-friendly.svg" alt="" class="img-fluid">
+            <h3 class="feature-title">User-Friendly Interface</h3>
+            <div class="feature-underline"></div>
+            <p class="feature-desc">
+              Our platform offers seamless task management to boost your
+              efficiency.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 feature-col">
+          <span class="feature-number">02</span>
+          <div class="feature-block d-flex flex-column align-items-start">
+            <!-- Icon: Collaborate & Share Effortlessly -->
+           <img src="./assets/img/share.svg" alt="" class="img fluid">
+            <h3 class="feature-title">Collaborate & Share Effortlessly</h3>
+            <div class="feature-underline"></div>
+            <p class="feature-desc">
+              Invite team members to work together and achieve your goals
+              faster.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 feature-col">
+          <span class="feature-number">03</span>
+          <div class="feature-block d-flex flex-column align-items-start">
+            <!-- Icon: Effortless Collaboration -->
+             <img src="./assets/img/effortless.svg" alt="">
+            <h3 class="feature-title">Effortless Collaboration</h3>
+            <div class="feature-underline"></div>
+            <p class="feature-desc">
+              Invite team members to work together and achieve your goals
+              faster.
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 feature-col">
+          <span class="feature-number">04</span>
+          <div class="feature-block d-flex flex-column align-items-start">
+            <!-- Icon: Seamless Access -->
+             <img src="./assets/img/seamless.svg" alt="" srcset="">
+            <h3 class="feature-title">Seamless Access</h3>
+            <div class="feature-underline"></div>
+            <p class="feature-desc">
+              Stay connected and manage your tasks on the go with ease.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- testimonials section start -->
+    <section id="testimonials">
+      <div class="container px-4 px-sm-0 py-5">
+        <div class="row pb-4">
+          <h2 class="display-5 fw-bold text-blue py-3">
+            Customer Testimonials
+          </h2>
+          <p>This tool has transformed my productivity and organization!</p>
+        </div>
+        <div class="box"></div>
+        <div
+          class="row bg-white p-5 position-relative"
+          style="top: -520px; left: 50px"
+        >
+          <div class="col-md-7">
+            <h2 class="fw-semibold fs-1">
+              Using this website has made my tasks so much easier! I can't
+              imagine my day without it."
+            </h2>
+            <div class="d-flex">
+              <img src="./assets/img/info-icon.svg" class="img-fluid" alt="" />
+              <div class="ms-2 mt-3">
+                <p class="fw-medium mb-1">Sherri Cronin</p>
+                <spam class="text-gray"
+                  ><small>Project Manager, TechCorp</small></spam
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-5 border-start-0 p-2"
+            style="border: 15px solid #ff3e54; max-height: 370px"
+          >
+            <img
+              src="./assets/img/girl.jpg"
+              alt=""
+              class="img-fluid h-100 w-100"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials section end -->
+
+    <section class="container hero-section">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <img
+            src=./assets/img/Photo.svg
+            alt=
+            class="hero-image" />
+        </div>
+        <div class="col-md-6">
+          <h1 class="fw-bold">Start Organizing Your Life Today</h1>
+          <p class="mb-4">
+            Join us now and transform your productivity with our intuitive to-do
+            list platform!
+          </p>
+          <div class="d-flex gap-3">
+            <button type="button" class="btn btn-signup px-4 py-2">
+              Sign Up
+            </button>
+            <button type="button" class="btn btn-outline-custom px-4 py-2">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- <div class="container my-5">
+
+  <table class="table table-bordered text-center">
+    <thead class="table-light">
+      <tr>
+        <th scope="col"><input type="checkbox"></th>
+        <th scope="col">Name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Language</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>John Doe</td>
+        <td>Male</td>
+        <td>English</td>
+        <td>johndow@gmail.com</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox"></td>
+        <td>Jiva Dove</td>
+        <td>Female</td>
+        <td>English, Hindi</td>
+        <td>jiyadovegmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
+    <!-- table section end -->
+   <div class="table-responsive p-5 shadow-lg" id="usertabledata" style="display: none;">
+     <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Language</th>
+                <th>Email Address</th>
+            </tr>
+        </thead>
+        <tbody id="tablerowdata">
+
+        </tbody>
+    </table>
+   </div>
+    <!-- table section end -->
+
+<footer class="bg-light pt-5">
+  <div class="container">
+    <div class="row text-start text-md-left">
+
+      <!-- Logo & Newsletter -->
+      <div class="col-md-4 mb-4">
+        <div class="d-flex align-items-center mb-3">
+          <img src="./assets/img/logo.png" alt="Logo" width="100" class="me-2" />
+          
+        </div>
+        <p>Subscribe to our newsletter for the latest features and updates delivered to you.</p>
+        <form class="d-flex">
+          <input type="email" class="form-control me-2" placeholder="Your email here" />
+          <button class="btn btn-danger px-4">Join</button>
+        </form>
+        <small class="text-muted d-block mt-2">By subscribing, you consent to our Privacy Policy and agree to receive updates.</small>
+      </div>
+
+      <!-- Useful Links -->
+      <div class="col-md-2 mb-4">
+        <h6 class="fw-bold mb-3">Useful Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Home Page</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Contact Us</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Blog Posts</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Resources</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-dark">Help Center</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">User Guide</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Community Forum</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Feedback</a></li>
+          <li><a href="#" class="text-decoration-none text-dark">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Connect With Us -->
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Connect With Us</h6>
+        <ul class="list-unstyled d-flex flex-column gap-2">
+          <li><i class="fab fa-facebook text-danger me-2"></i> Facebook</li>
+          <li><i class="fab fa-instagram text-danger me-2"></i> Instagram</li>
+          <li><i class="fab fa-x-twitter text-danger me-2"></i> X</li>
+          <li><i class="fab fa-linkedin text-danger me-2"></i> LinkedIn</li>
+          <li><i class="fab fa-youtube text-danger me-2"></i> YouTube</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Footer -->
+  <div class="border-top mt-3 pt-3 text-center small">
+    <div class="container d-md-flex justify-content-between align-items-center">
+      <div class="text-muted">© 2024 Osumare. All rights reserved.</div>
+      <div>
+        <a href="#" class="text-decoration-none text-dark me-3">Privacy Policy</a>
+        <a href="#" class="text-decoration-none text-dark me-3">Terms of Service</a>
+        <a href="#" class="text-decoration-none text-dark">Cookie Settings</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 ps-2" id="exampleModalLabel">Get Started Today!</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="" id="signupform">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <p>Fill in your details and take control of your tasks.</p>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-6">
+                                    <label for="fname" class="form-label fw-medium">First Name</label>
+                                    <input type="text" class="form-control" name="fname" id="fname"
+                                        placeholder="Enter your First name" required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="lname" class="form-label fw-medium">Last Name</label>
+                                    <input type="text" class="form-control" name="lname" id="lname"
+                                        placeholder="Enter your last name" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="form-label fw-medium">Gender</label>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class=" form-check">
+                                        <input type="radio" class="form-check-input" name="gender" id="male"
+                                            value="male">
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6">
+                                    <div class=" form-check"><input type="radio" class="form-check-input" name="gender"
+                                            id="female" value="female">
+                                        <label class="form-check-label" for="female">Female</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label class="form-label fw-medium">Language</label>
+                                <div class="col-lg-5 col-sm-8">
+                                    <div class=" form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="Language" id="english"
+                                            value="english">
+                                        <label class="form-check-label" for="english">English</label>
+                                    </div>
+                                    <div class=" form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="Language" id="Hindi"
+                                            value="Hindi">
+                                        <label class="form-check-label" for="Hindi">Hindi</label>
+                                    </div>
+                                    <div class=" form-check mb-2">
+                                        <input type="checkbox" class="form-check-input" name="Language" id="marathi"
+                                            value="marathi">
+                                        <label class="form-check-label" for="marathi">Marathi</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <label for="email" class="form-label fw-medium">Email Address</label>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                        placeholder="Enter your email address" required>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <input type="checkbox" class="form-check-input" name="agree" id="agree">
+                                    <label for="agree" class="form-check-label ps-2">I agree to the <span
+                                            class="text-pinkred">terms and conditions.</span></label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button type="submit" class="btn bg-pinkred text-white py-2">Done</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- thanku Modal -->
+    <div class="modal fade" id="thankuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center p-5">
+                    <img src="./assets/img/heart.png" width="40px" height="40px" class="img-fluid">
+                    <h5>Thank you for connect with us.</h5>
+                    <p>Our team will contacting with you soon</p>
+                    <div class="d-flex justify-content-center">
+                        <button type="button"data-bs-dismiss="modal" aria-label="Close" class="btn bg-pinkred text-white py-2 w-75" id="closeThankYou">Done</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js
+"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
